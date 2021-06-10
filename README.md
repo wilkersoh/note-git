@@ -155,7 +155,7 @@ checkout  to other branch but don't commit them. Store in local git
 
 ```bash
 git stash save "some msg"
-git show list
+git stash list
 git stash show -p stash@{0} // check what change you made
 ```
 
@@ -165,12 +165,15 @@ git stash list able to check the `statsh-name` eg:`stash@{0}`
 
 ```bash
 git stash apply STASH-NAME
+// same as
+git stash apply 0 // if you want the first
 ```
 
 applies the changes and **`removes`** the files from the stash
 
 ```bash
 git stash pop STASH-NAME
+git statsh pop 0 // if you want the first
 ```
 
 remove stashed changes without applying them, run the command
